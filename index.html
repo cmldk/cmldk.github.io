@@ -8,6 +8,7 @@
     <title>Cemal Dak | BLOG</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -39,9 +40,8 @@
             </div>
             <div id="profile" class="container" style="text-align:center">
                 <div>
-                    <div class="mb-3">
-                        <img src="images/IMG.png" alt="foto" height="200px"
-                            style="box-shadow: 5px 5px #88888838;border-radius: 100%;">
+                    <div class="mb-5">
+                        <img class="photo" src="images/IMG.png" alt="photo">
                     </div>
                     <h1>Cemal Dak</h1>
                     <h4>Computer Engineering Student</h4>
@@ -52,13 +52,18 @@
                         the software engineering and blockchain technology.
                         You can find some of my projects here.
                     </p>
-                    <div class="social_icons">
-                        <a target="_blank" href="https://github.com/cmldk"><img src="images/github.png"
-                                alt="Cemal Dak"></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/cemaldak"><img src="images/linkedin.png"
-                                alt="Cemal Dak"></a>
-                        <a target="_blank" href="mailto:cemal.dak@gmail.com"><img src="images/mail.png" alt="Cemal Dak"
-                                style="padding-top: 10px;"></a>
+                    <div class="grid-container-icon mr-auto ml-auto">
+                        <a target="_blank" href="https://github.com/cmldk"><span class="icon-color"><i
+                                    class="fab fa-github fa-3x"></i></span></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/cemaldak"><span class="icon-color"><i
+                                    class="fab fa-linkedin-in fa-3x"></i></span></a>
+                        <a target="_blank" href="mailto:cemal.dak@gmail.com">
+                            <span class="icon-color">
+                                <i class="fas fa-envelope fa-3x"></i>
+                            </span>
+                        </a>
+                        <a target="_blank" href="https://www.hackerrank.com/cmldk?hr_r=1"><span class="icon-color"><i
+                                    class="fab fa-hackerrank fa-3x"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -88,15 +93,17 @@
                                     <img width="100%" src="images/python.png" alt="Python">
                                 </div>
                                 <div class="grid-div-small p-1">
-                                    <img width="100%" height="100%" src="images/java-vector.svg" alt="Java">
+                                    <img width="100%" height="100%" src="images/java-vector.svg" alt="Java"
+                                        title="Java">
                                 </div>
                             </div>
                             <div class="grid-container-small justify-content-center pt-4">
                                 <div class="grid-div-small p-1">
-                                    <img width="100%" src="images/javascript-vector.svg" alt="Javascript">
+                                    <img width="100%" src="images/javascript-vector.svg" alt="Javascript"
+                                        title="Javascript">
                                 </div>
                                 <div class="grid-div-small p-1">
-                                    <img height="100%" src="images/solidity-vector.svg" alt="Solidity">
+                                    <img height="100%" src="images/solidity-vector.svg" alt="Solidity" title="Solidity">
                                 </div>
                             </div>
                         </div>
@@ -114,12 +121,13 @@
                                     <img width="100%" src="images/django.png" alt="Django">
                                 </div>
                                 <div class="grid-div-small p-1">
-                                    <img height="100%" height="100%" src="images/adobexd-vector.svg" alt="Adobe XD">
+                                    <img height="100%" height="100%" src="images/adobexd-vector.svg" alt="Adobe XD"
+                                        title="Adobe XD">
                                 </div>
                             </div>
                             <div class="grid-container pt-4">
                                 <div class="grid-div-small p-1 centered">
-                                    <img width="100%" src="images/docker.png" alt="R-Studio">
+                                    <img width="100%" src="images/docker.png" alt="Docker">
                                 </div>
                             </div>
                         </div>
@@ -156,16 +164,182 @@
                 </div>
             </div>
             <div class="container">
-
+                <div class="project-div row mb-5">
+                    <div class="col-lg-4">
+                        <div class="col-lg-12 hov mb-2">
+                            <div class="card-body">
+                                <div class="p-2 mb-3">
+                                    <div class="card-image rounded shadow">
+                                        <a href="http://wiki.netseclab.mu.edu.tr/index.php?title=STK-AKYS"
+                                            target="_blank">
+                                            <img src="images/stk-akys.png" alt="stk-akys" height="100%"
+                                                width="100%"></a>
+                                    </div>
+                                </div>
+                                <div class="card-text pr-5 pl-5">
+                                    <h3><strong>STK-AKYS</strong></h3>
+                                    <p>
+                                        The proposed blockchain system aims to enable the non-governmental
+                                        organizations
+                                        (NGO) and public institutions to manage
+                                        and coordinate the resources in a trusted environment in the case of
+                                        disasters.
+                                    </p>
+                                </div>
+                                <div class="card-bottom grid-container-4">
+                                    <p style="color: #38386B;">Javascript</p>
+                                    <p style="color: #CB5658;">Solidity</p>
+                                    <p style="color: orange;">ExpressJS</p>
+                                    <p style="color: rgb(73, 211, 119);">MySQL</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="https://github.com/MSKU-BcRG/akys" target="_blank"><span
+                                            class="icon-color"><i class="fab fa-github fa-2x"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 hov">
+                            <div class="card-body">
+                                <div class="p-2 mb-3">
+                                    <div class="card-image rounded shadow">
+                                        <a href="https://univerna.pythonanywhere.com" target="_blank">
+                                            <img src="images/website.jpg" alt="univerna" height="100%"></a>
+                                    </div>
+                                </div>
+                                <div class="card-text pr-5 pl-5">
+                                    <h3><strong>Univerna</strong></h3>
+                                    <p>
+                                        This is a website project for Warsaw based education community.
+                                    </p>
+                                </div>
+                                <div class="card-bottom grid-container-4 mb-2">
+                                    <p style="color: orange;">Python</p>
+                                    <p style="color: #CB5658;">Django</p>
+                                    <p style="color: rgb(73, 211, 119);">JQuery</p>
+                                    <p style="color: #38386B">SQLite</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="col-lg-12 hov mb-2">
+                            <div class="card-body">
+                                <div class="p-2 mb-3">
+                                    <div class="card-image rounded shadow">
+                                        <a href="https://github.com/cmldk/tuvisai" target="_blank">
+                                            <img src="images/tuvis.png" alt="Tuvis" height="100%"></a>
+                                    </div>
+                                </div>
+                                <div class="card-text pr-5 pl-5">
+                                    <h3><strong>Tuvis</strong></h3>
+                                    <p>
+                                        A website dashboard project which has charts, records, login-register system
+                                        e.g.
+                                    </p>
+                                </div>
+                                <div class="card-bottom grid-container-4">
+                                    <p style="color: rgb(73, 211, 119);">Python</p>
+                                    <p style="color: #38386B">Django</p>
+                                    <p style="color: orange;">JQuery</p>
+                                    <p style="color:  rgb(151, 114, 208);">MySQL</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="https://github.com/cmldk/tuvisai" target="_blank"><span
+                                            class="icon-color"><i class="fab fa-github fa-2x"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 hov">
+                            <div class="card-body">
+                                <div class="p-2 mb-3">
+                                    <div class="card-image rounded shadow">
+                                        <a href="https://github.com/cmldk/django-blog-app" target="_blank">
+                                            <img src="images/blog.png" alt="django-blog-app" height="100%"
+                                                width="100%"></a>
+                                    </div>
+                                </div>
+                                <div class="card-text pr-5 pl-5">
+                                    <h3><strong>Web Blog</strong></h3>
+                                    <p>
+                                        This is a website project that allows to find articles, paragraphs or texts.
+                                        Users can comment existing sharings or share a new text.
+                                    </p>
+                                </div>
+                                <div class="card-bottom grid-container-2">
+                                    <p style="color: #CB5658;">Django</p>
+                                    <p style="color: #38386B;">SQLite</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="https://github.com/cmldk/django-blog-app" target="_blank"><span
+                                            class="icon-color"><i class="fab fa-github fa-2x"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="col-lg-12 hov mb-2">
+                            <div class="card-body">
+                                <div class="p-2 mb-3">
+                                    <div class="card-image rounded shadow">
+                                        <a href="https://github.com/cmldk/eventsapp" target="_blank">
+                                            <img src="images/androidpro.jpg" alt="eventsapp" height="100%"></a>
+                                    </div>
+                                </div>
+                                <div class="card-text pr-5 pl-5">
+                                    <h3><strong>EventsApp</strong></h3>
+                                    <p>
+                                        An android project allows to show events that can happen in an area with date
+                                        and details. Users can register and generate own events using the app.
+                                    </p>
+                                </div>
+                                <div class="card-bottom grid-container-3">
+                                    <p style="color: rgb(0, 204, 255);">Java</p>
+                                    <p style="color: #CB5658;">Parse</p>
+                                    <p style="color: rgb(73, 211, 119);">Maps</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="https://github.com/cmldk/eventsapp" target="_blank"><span
+                                            class="icon-color"><i class="fab fa-github fa-2x"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 hov">
+                            <div class="card-body">
+                                <div class="p-2 mb-3">
+                                    <div class="card-image rounded shadow">
+                                        <a href="https://github.com/cmldk/DB_Project" target="_blank">
+                                            <img src="images/db.png" alt="database-project" height="100%"></a>
+                                    </div>
+                                </div>
+                                <div class="card-text pr-5 pl-5">
+                                    <h3><strong>Database Project</strong></h3>
+                                    <p>
+                                        This project is a website that shows information about universities and colleges
+                                        in
+                                        USA.
+                                        Also, it allows to find information about universities in World Rank 2012 and
+                                        2013.
+                                    </p>
+                                </div>
+                                <div class="card-bottom grid-container-3">
+                                    <p style="color: rgb(0, 204, 255);">Python</p>
+                                    <p style="color:  rgb(151, 114, 208);">MySQL</p>
+                                    <p style="color: orange;">Flask</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="https://github.com/cmldk/DB_Project" target="_blank"><span
+                                            class="icon-color"><i class="fab fa-github fa-2x"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/run_prettify.js"></script>
+    <script src="js/all.min.js"></script>
 </body>
 
 </html>
