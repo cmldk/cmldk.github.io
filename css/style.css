@@ -23,4 +23,5 @@ h4{margin: 0!important;padding: 0!important;}.grid-container-small {display: gri
 .card-image{width: 100%;height:200px;background-color: white;}.bg-white{background-color: white;}.card-text{color: #444444;}
 .grid-container-4 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}.icon-color{color:#444444}
 .grid-container-3 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}.photo{box-shadow: 5px 5px #88888838;border-radius: 100%;height: 220px;}
-.grid-container-2 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}
+.grid-container-2 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}.icon-hover{padding: 2px!important;}
+.icon-hover:hover{padding: 0px!important;transition: all .3s ease;-webkit-transition: all .3s ease;}
