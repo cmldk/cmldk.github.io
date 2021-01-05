@@ -12,16 +12,15 @@ h4{margin: 0!important;padding: 0!important;}.grid-container-small {display: gri
 .grid-container-icon{display: grid;grid-template-columns: repeat(4, 1fr);max-width: 300px;}
 .grid-container-4{display: grid;grid-template-columns: repeat(4, 1fr);padding: 10px;}.grid-container-2{display: grid;grid-template-columns: repeat(2, 1fr);padding: 10px;}
 .grid-div-horizontal {width: 130px;height: 90px;margin-left: auto;margin-right: auto;}.grid-div-horizontal img{padding: 5px;}
-.grid-div-horizontal img:hover{padding: 0px;transition: all .3s ease;-webkit-transition: all .3s ease;}
 .grid-div-small {width: 90px;height: 90px;margin-left: auto;margin-right: auto;}.grid-div-small img{padding: 5px;}
-.grid-div-small img:hover{padding: 0px;transition: all .3s ease;-webkit-transition: all .3s ease;}.mb-15{margin-bottom: 13px;}
 .centered{display: flex;align-items: center;}.title-div{background-color: #444444;border-radius: 3px;width: 100%;color: white;}
 @media only screen and (max-width: 800px) {#navlogo{ display: none;}}.bxsh{box-shadow: 1px 1px 4px rgb(197, 197, 197);}
 .rotated{-webkit-transform: scaleX(-1);transform: scaleX(-1);}* {font-family:myfont;}.shadow{box-shadow: 1px 1px 1px rgb(141, 141, 141,0.575)}
-.card-body{border-radius: 5px;box-shadow: 1px 1px 20px rgba(141, 141, 141, 0.411);background-color: white}
-.hov:hover{padding: 0px!important;transition: all .5s ease;-webkit-transition: all .5s ease;margin-bottom: 18px!important;}
+.card-body{border-radius: 5px;box-shadow: 1px 1px 20px rgba(141, 141, 141, 0.411);background-color: white;transition: all .3s;}
+.card-body:hover {transform: translateY(-8px) scale(1.01);} 
 .card-image{width: 100%;height:200px;background-color: white;}.bg-white{background-color: white;}.card-text{color: #444444;}
 .grid-container-4 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}.icon-color{color:#444444}
 .grid-container-3 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}.photo{box-shadow: 5px 5px #88888838;border-radius: 100%;height: 220px;}
 .grid-container-2 p{font-size: 12px;font-weight: 600;margin-bottom: 0px!important;}.icon-hover{padding: 2px!important;}
-.icon-hover:hover{padding: 0px!important;transition: all .3s ease;-webkit-transition: all .3s ease;}.h-auto{height: auto;}
+.h-auto{height: auto;}.icon-hover {transition: all .2s;}.icon-hover:hover {transform: translateY(-5px) scale(1.1);}
+.msku__link:hover{text-decoration: none;border: none;}
