@@ -3,7 +3,6 @@ import type { Site, Metadata, Socials } from '@types';
 export const SITE: Site = {
   NAME: 'Cemal Dak',
   HEADER_NAME: 'cmldk',
-  EMAIL: 'cemal.dak@gmail.com',
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
   NUM_PROJECTS_ON_HOMEPAGE: 3,

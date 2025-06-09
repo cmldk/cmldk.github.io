@@ -200,6 +200,4 @@ Projenin github sayfasını [linkten](https://github.com/cmldk/bc-smartcontractd
 
 Ayrıca bu konu ile alakalı başka bir örnek github çalışması incelemek isterseniz [linkten](https://github.com/cmldk/bc-smartcontractdev/tree/main/ERC20-mytoken) inceleyebilirsiniz.
 
-Soru ve görüşleriniz için [cemal.dak@gmail.com](mailto:cemal.dak@gmail.com) mail adresinden ulaşabilirsiniz.
-
 Yazının Medium linkine [buradan](https://medium.com/@cemaldak/truffle-suite-kullanarak-ethereum-ropsten-test-a%C4%9F%C4%B1-%C3%BCzerinde-ak%C4%B1ll%C4%B1-kontrat-geli%C5%9Ftirme-2b21b85398d9) ulaşabilirsiniz.
