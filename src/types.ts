@@ -15,3 +15,20 @@ export type Socials = {
   NAME: string;
   HREF: string;
 }[];
+
+export type Bookmark = {
+  _id: number;
+  excerpt: string;
+  note: string;
+  type: string;
+  cover: string;
+  tags: string[];
+  removed: boolean;
+  title: string;
+  link: string;
+  created: string;
+  lastUpdate: string;
+  important: boolean;
+  sort: number;
+  collectionId: number;
+};

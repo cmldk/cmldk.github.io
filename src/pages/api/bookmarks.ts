@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { fetchRaindropBookmarks } from '@lib/raindrop';
 
-export const GET: APIRoute = async ({ request }: { request: Request }) => {
+export const GET: APIRoute = async () => {
   try {
     const data = await fetchRaindropBookmarks();
 

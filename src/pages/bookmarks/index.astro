@@ -6,6 +6,7 @@ import Container from '@components/Container.astro';
 import { BOOKMARKS } from '@consts';
 import { fetchRaindropBookmarks } from '@lib/raindrop';
 import MoreButton from '@components/MoreButton.astro';
+import type { Bookmark } from '@types';
 
 const data = await fetchRaindropBookmarks();
 
@@ -20,11 +21,8 @@ const ITEMS_PER_LOAD = 10;
         bookmarks.length === 0 ? (
           <li>No bookmarks found.</li>
         ) : (
-          bookmarks.slice(0, ITEMS_PER_LOAD).map((bookmark) => (
-            <li
-              key={bookmark._id}
-              class="flex items-start gap-4 p-4 border rounded-lg hover:bg-gray-50 transition"
-            >
+          bookmarks.slice(0, ITEMS_PER_LOAD).map((bookmark: Bookmark) => (
+            <li class="flex items-start gap-4 p-4 border rounded-lg hover:bg-gray-50 transition">
               {bookmark.cover ? (
                 <img
                   src={bookmark.cover}
@@ -63,6 +61,7 @@ const ITEMS_PER_LOAD = 10;
     }
 
     <script
+      is:inline
       define:vars={{
         allBookmarks: bookmarks,
         initialItems: ITEMS_PER_LOAD,
@@ -96,14 +95,14 @@ const ITEMS_PER_LOAD = 10;
             : '';
 
           li.innerHTML = `
-            ${imgHtml}
-            <div class="flex-1">
-              <a href="${bookmark.link}" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 hover:underline">
-                ${bookmark.title}
-              </a>
-              ${excerptHtml}
-            </div>
-          `;
+        ${imgHtml}
+        <div class="flex-1">
+          <a href="${bookmark.link}" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 hover:underline">
+            ${bookmark.title}
+          </a>
+          ${excerptHtml}
+        </div>
+      `;
           fragment.appendChild(li);
         }
         bookmarkList.appendChild(fragment);
