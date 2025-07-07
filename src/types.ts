@@ -31,4 +31,8 @@ export type Bookmark = {
   important: boolean;
   sort: number;
   collectionId: number;
+  media: {
+    link: string;
+    type: string;
+  }[];
 };

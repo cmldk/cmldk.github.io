@@ -5,117 +5,31 @@ import PageLayout from '@layouts/PageLayout.astro';
 import Container from '@components/Container.astro';
 import { BOOKMARKS } from '@consts';
 import { fetchRaindropBookmarks } from '@lib/raindrop';
-import MoreButton from '@components/MoreButton.astro';
+import BookmarkCard from '@components/BookmarkCard.astro';
 import type { Bookmark } from '@types';
 
 const data = await fetchRaindropBookmarks();
 
 const bookmarks = data.bookmarks || [];
-const ITEMS_PER_LOAD = 10;
 ---
 
 <PageLayout title={BOOKMARKS.TITLE} description={BOOKMARKS.DESCRIPTION}>
   <Container>
-    <ul id="bookmark-list" class="space-y-4">
-      {
-        bookmarks.length === 0 ? (
-          <li>No bookmarks found.</li>
-        ) : (
-          bookmarks.slice(0, ITEMS_PER_LOAD).map((bookmark: Bookmark) => (
-            <li class="flex items-start gap-4 p-4 border rounded-lg hover:bg-gray-50 transition">
-              {bookmark.cover ? (
-                <img
-                  src={bookmark.cover}
-                  alt={bookmark.title}
-                  class="w-16 h-16 object-cover rounded"
-                />
-              ) : (
-                <div class="w-16 h-16 bg-gray-200 rounded" />
-              )}
-
-              <div class="flex-1">
-                <a
-                  href={bookmark.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-lg font-semibold text-blue-600 hover:underline"
-                >
-                  {bookmark.title}
-                </a>
-                {bookmark.excerpt && (
-                  <p class="text-sm text-gray-600 mt-1">{bookmark.excerpt}</p>
-                )}
-              </div>
-            </li>
-          ))
-        )
-      }
-    </ul>
-
-    {
-      bookmarks.length > ITEMS_PER_LOAD && (
-        <div class="flex justify-center mt-8">
-          <MoreButton />
-        </div>
-      )
-    }
-
-    <script
-      is:inline
-      define:vars={{
-        allBookmarks: bookmarks,
-        initialItems: ITEMS_PER_LOAD,
-        itemsPerLoad: ITEMS_PER_LOAD,
-      }}
-    >
-      const bookmarkList = document.getElementById('bookmark-list');
-      const loadMoreButton = document.getElementById('load-more-button');
-
-      let currentIndex = initialItems;
-
-      function renderBookmarks() {
-        const fragment = document.createDocumentFragment();
-        for (
-          let i = currentIndex;
-          i < Math.min(currentIndex + itemsPerLoad, allBookmarks.length);
-          i++
-        ) {
-          const bookmark = allBookmarks[i];
-          const li = document.createElement('li');
-          li.key = bookmark._id;
-          li.className =
-            'flex items-start gap-4 p-4 border rounded-lg hover:bg-gray-50 transition';
-
-          const imgHtml = bookmark.cover
-            ? `<img src="${bookmark.cover}" alt="${bookmark.title}" class="w-16 h-16 object-cover rounded" />`
-            : `<div class="w-16 h-16 bg-gray-200 rounded" />`;
-
-          const excerptHtml = bookmark.excerpt
-            ? `<p class="text-sm text-gray-600 mt-1">${bookmark.excerpt}</p>`
-            : '';
-
-          li.innerHTML = `
-        ${imgHtml}
-        <div class="flex-1">
-          <a href="${bookmark.link}" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 hover:underline">
-            ${bookmark.title}
-          </a>
-          ${excerptHtml}
-        </div>
-      `;
-          fragment.appendChild(li);
+    <div class="space-y-10">
+      <div class="animate font-semibold text-black dark:text-white">
+        Bookmarks
+      </div>
+      <ul id="bookmark-list" class="animate flex flex-col gap-4">
+        {
+          bookmarks.length === 0 ? (
+            <li>No bookmarks found.</li>
+          ) : (
+            bookmarks.map((bookmark: Bookmark) => (
+              <BookmarkCard bookmark={bookmark} />
+            ))
+          )
         }
-        bookmarkList.appendChild(fragment);
-        currentIndex += itemsPerLoad;
-
-        if (currentIndex >= allBookmarks.length) {
-          loadMoreButton.style.display = 'none';
-        }
-      }
-
-      if (loadMoreButton) {
-        loadMoreButton.addEventListener('click', renderBookmarks);
-      }
-    </script>
+      </ul>
+    </div>
   </Container>
 </PageLayout>
