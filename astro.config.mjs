@@ -6,5 +6,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://cmldk.github.io',
   integrations: [mdx(), sitemap(), tailwind()],
-  output: 'server',
+  output: 'hybrid',
 });
